@@ -382,6 +382,26 @@
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <figure class="image" style="margin-bottom: 30px;">
+          <img
+            src="./static/images/teaser.png"
+            style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+      </figure>
+      <h2 class="subtitle">
+        Figure 1. We introduce DiscoForcing, a real-time, audio-responsive character control system. 
+        Given online streaming audio inputs, DiscoForcing causally synthesizes continuous 
+        full-body motions in real time. The generated motion supports two deployment settings: 
+        (i) <b><span style="color: rgb(201, 138, 1);">avatar interactive control</span></b> 
+        for responsive animation and visualization, and (ii) <b><span style="color: rgb(201, 138, 1);"> physics-based humanoid platform</span></b> 
+        by converting the predicted motion into executable humanoid joint commands.
+      </h2>
+    </div>
+  </div>
+</section>
+
 <!-- ===============================
      Abstract
      =============================== -->
@@ -390,11 +410,6 @@
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <figure class="image" style="margin-bottom: 100px;">
-          <img
-            src="./static/images/teaser.png"
-            style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
-        </figure>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -441,7 +456,7 @@
         </figure>
 
         <h2 class="subtitle" style="text-align: left; font-size: 17px;">
-          Figure 1. An overview of <b><span style="color: purple;">DiscoForcing</span></b>. 
+          Figure 2. An overview of <b><span style="color: purple;">DiscoForcing</span></b>. 
           DiscoForcing encodes live audio into a <b><span style="color: rgb(224, 0, 138);">causal music feature </span></b> (30 Hz) and generates 
           continuous full-body motion via a <b><span style="color: rgb(1, 173, 185);">diffusion forcing transformer </span></b> conditioned on the 
           feature and a history buffer (30 Hz). The resulting motion is delivered to (i) an 
@@ -451,6 +466,22 @@
         </h2>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Visualization Results</h2>
+
+    <img src="./static/images/demo_fig.png" class="interpolation-image" alt="Interpolate start reference image." />
+    <h2 class="subtitle has-text-justified">
+      Figure 3. Demonstration of Our Method. In a strictly causal, bounded-latency online streaming rollout, 
+      DiscoForcing keeps the character stationary during silent segments (mute), and immediately 
+      generates beat-synchronized full-body dance once music resumes. As the input stream undergoes 
+      multiple music transitions, our model adapts in real time to the changing audio while 
+      maintaining long-horizon temporal coherence and smooth motion continuity.
+    </h2>
   </div>
 </section>
 
